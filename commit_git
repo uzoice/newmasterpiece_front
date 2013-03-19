@@ -1,0 +1,11 @@
+#!/usr/bin/expect
+
+set timeout 60
+spawn sh commit
+expect "*Usename for *" {
+	send "uzoice\r"
+	expect "Password for*" {
+		send "qw050115\r"
+	}
+}
+interact
